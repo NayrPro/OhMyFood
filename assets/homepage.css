@@ -1,3 +1,120 @@
+.flex {
+  display: flex;
+}
+
+.center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.back {
+  position: absolute;
+  top: 17px;
+  left: 17px;
+  padding: 7px 6px;
+}
+.back a {
+  color: #000;
+  text-decoration: none;
+}
+.back i {
+  font-size: 20px;
+}
+
+.restaurant_img img {
+  width: 375px;
+  height: 275px;
+}
+
+.restaurants_page {
+  padding: 17px 17px 0 17px !important;
+  gap: 40px !important;
+  background: #F6F6F6;
+  position: relative;
+  top: -20px;
+}
+
+.restaurants .restaurant_title h1 {
+  font-family: Shrikhand;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 41px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #101010;
+}
+.restaurants .restaurant_title .heart {
+  font-variation-settings: "FILL" 0;
+  font-weight: 100;
+  font-size: 30px;
+  cursor: default;
+  caret-color: transparent;
+  margin-left: 30px;
+}
+.restaurants .menus {
+  gap: 12px;
+}
+.restaurants .menus h2 {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.restaurants .menus .menu {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 4.0114941597px 15.0431032181px 0px rgba(0, 0, 0, 0.1019607843);
+  gap: 5px;
+  padding: 15px;
+}
+.restaurants .menus .menu .menu_title {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.restaurants .menus .menu span {
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.restaurants .menus .menu .menu_price {
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.restaurants .reservation_page {
+  padding: 0 !important;
+}
+.restaurants .reservation_page a {
+  margin: 0 0 40px !important;
+}
+
 .m-0 {
   margin: 0;
 }
@@ -14,18 +131,20 @@
 }
 
 .header-logo {
-  height: 63px;
   background: #FFFFFF;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
   position: relative;
+  padding: 14px 89px;
 }
 
 .logo {
   width: 197px;
   height: 36px;
-  position: relative;
-  top: 14px;
-  left: 89px;
+  text-align: center;
+}
+.logo img {
+  width: 162px;
+  height: 44px;
 }
 
 .location {
@@ -260,7 +379,7 @@
   cursor: default;
   caret-color: transparent;
 }
-.restaurants .restaurant__box .restaurant__card .restaurant__card__details input[type=checkbox]:checked + .heart {
+.restaurants .restaurant__box .restaurant__card .restaurant__card__details input[type=checkbox]:checked + .heart, .restaurants .restaurant__box .restaurant__card .restaurant__card__details .heart:hover {
   font-variation-settings: "FILL" 100;
   background: linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
