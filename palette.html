@@ -31,78 +31,167 @@
                 </div>
         </header>
         <main>
-            <div class="restaurant_img">
-                <img src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
-            </div>
+            <img class="restaurant_img" src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
             <div class="restaurants restaurants_page flex col">
                 <div class="restaurant_title flex row align-center">
-                    <h1 class="m-0">La palette du goût</h1>  
-                    <span class="material-symbols-outlined heart">
-                        favorite
-                    </span>
+                    <h1 class="m-0">La palette du goût</h1>
+                    <label>
+                        <input type="checkbox">  
+                        <span class="material-symbols-outlined heart">
+                            favorite
+                        </span>
+                    </label>
                 </div>
-                <div class="menus flex col">
-                    <h2 class="m-0">ENTRÉES</h2>
-                    <div class="menu flex col">
-                        <p class="m-0 menu_title">Fricassée d'escargots</p>
-                        <div class="menu_detail flex row space-between">
-                            <span>Au piment d'Espelette </span> <p class="m-0 menu_price">25€</p>
-                        </div>
+                <div class="menus flex col entrees">
+                    <div class="menus_title flex col">
+                        <h2 class="m-0">ENTRÉES</h2>
+                        <div class="underline"></div>
                     </div>
-                    <div class="menu flex col">
-                        <p class="m-0 menu_title">Foie gras de canard mi-cuit</p>
-                        <div class="menu_detail flex row space-between">
-                            <span>Et ses copeaux de truffe noire</span> <p class="m-0 menu_price">35€</p>
+                    <label>
+                        <input type="checkbox">
+                        <div class="menu flex row">
+                            <div class="menu_card flex col">
+                                <p class="m-0 menu_title">Fricassée d'escargots</p>
+                                <div class="menu_detail flex row space-between">
+                                    <span>Au piment d'Espelette </span>
+                                </div>
+                            </div>
+                            <div class="validation_box flex row">
+                                <p class="m-0 menu_price">25€</p>
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
                         </div>
-                    </div>
-                    <div class="menu flex col">
-                        <p class="m-0 menu_title">Œuf au plat</p>
-                        <div class="menu_detail flex row space-between">
-                            <span>Assaisonné à la truffe sur lit de caviar</span> <p class="m-0 menu_price">20€</p>
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <div class="menu flex row">
+                            <div class="menu_card flex col">
+                                <p class="m-0 menu_title">Foie gras de canard mi-cuit</p>
+                                <div class="menu_detail flex row space-between">
+                                    <span>Et ses copeaux de truffe noire</span>
+                                </div>
+                            </div>
+                            <div class="validation_box flex row">
+                                <p class="m-0 menu_price">35€</p>
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
                         </div>
-                    </div>
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <div class="menu flex row">
+                            <div class="menu_card flex col">
+                                <p class="m-0 menu_title">Œuf au plat</p>
+                                <div class="menu_detail flex row space-between">
+                                    <span>Assaisonné à la truffe sur lit de caviar</span>                                 </div>
+                            </div>
+                            <div class="validation_box flex row">
+                                <p class="m-0 menu_price">20€</p>
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+                        </div>
+                    </label>
                 </div>
-                <div class="menus flex col">
-                    <h2 class="m-0">PLATS</h2>
-                    <div class="menu flex col">
-                        <p class="m-0 menu_title">Filet de bœuf aux herbes</p>
-                        <div class="menu_detail flex row space-between">
-                            <span>Accompagné de sa ribambelle de légumes</span> <p class="m-0 menu_price">40€</p>
-                        </div>
+                <div class="menus flex col plats">
+                    <div class="menus_title flex col">
+                        <h2 class="m-0">PLATS</h2>
+                        <div class="underline"></div>
                     </div>
-                    <div class="menu flex col">
-                        <p class="m-0 menu_title">Parmentier de queue de bœuf</p>
-                        <div class="menu_detail flex row space-between">
-                            <span>À la truffe noire sur sa purée de panais</span> <p class="m-0 menu_price">35€</p>
+                    <label>
+                        <input type="checkbox">
+                        <div class="menu flex row">
+                            <div class="menu_card flex col">
+                                <p class="m-0 menu_title">Filet de bœuf aux herbes</p>
+                                <div class="menu_detail flex row space-between">
+                                    <span>Accompagné de sa ribambelle de légumes</span>
+                                </div>
+                            </div>
+                            <div class="validation_box flex row">
+                                <p class="m-0 menu_price">40€</p>
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
                         </div>
-                    </div>
-                    <div class="menu flex col">
-                        <p class="m-0 menu_title">Filet de turbot</p>
-                        <div class="menu_detail flex row space-between">
-                            <span>Aux agrumes</span> <p class="m-0 menu_price">44€</p>
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <div class="menu flex row">
+                            <div class="menu_card flex col">
+                                <p class="m-0 menu_title">Parmentier de queue de bœuf</p>
+                                <div class="menu_detail flex row space-between">
+                                    <span>À la truffe noire sur sa purée de panais</span>                                 </div>
+                            </div>
+                            <div class="validation_box flex row">
+                                <p class="m-0 menu_price">35€</p>
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
                         </div>
-                    </div>
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <div class="menu flex row">
+                            <div class="menu_card flex col">
+                                <p class="m-0 menu_title">Filet de turbot</p>
+                                <div class="menu_detail flex row space-between">
+                                    <span>Aux agrumes</span> 
+                                </div>
+                            </div>
+                            <div class="validation_box flex row">
+                                <p class="m-0 menu_price">44€</p>
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+                        </div>
+                    </label>
                 </div>
-                <div class="menus flex col">
-                    <h2 class="m-0">DESSERTS</h2>
-                    <div class="menu flex col">
-                        <p class="m-0 menu_title">Paris-Brest</p>
-                        <div class="menu_detail flex row space-between">
-                            <span>Revisité</span> <p class="m-0 menu_price">18€</p>
-                        </div>
+                <div class="menus flex col desserts">
+                    <div class="menus_title flex col">
+                        <h2 class="m-0">DESSERTS</h2>
+                        <div class="underline"></div>
                     </div>
-                    <div class="menu flex col">
-                        <p class="m-0 menu_title">Macaron au chocolat d'exception </p>
-                        <div class="menu_detail flex row space-between">
-                            <span>Et glace à la vanille de Madagascar</span> <p class="m-0 menu_price">22€</p>
+                    <label>
+                        <input type="checkbox">
+                        <div class="menu flex row">
+                            <div class="menu_card flex col">
+                                <p class="m-0 menu_title">Paris-Brest</p>
+                                <div class="menu_detail flex row space-between">
+                                    <span>Revisité</span>
+                                </div>
+                            </div>
+                            <div class="validation_box flex row">
+                                <p class="m-0 menu_price">18€</p>
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
                         </div>
-                    </div>
-                    <div class="menu flex col">
-                        <p class="m-0 menu_title">Mousse au chocolat </p>
-                        <div class="menu_detail flex row space-between">
-                            <span>Au piment d'Espelette et à la truffe noire</span> <p class="m-0 menu_price">23€</p>
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <div class="menu flex row">
+                            <div class="menu_card flex col">
+                                <p class="m-0 menu_title">Macaron au chocolat d'exception </p>
+                                <div class="menu_detail flex row space-between">
+                                    <span>Et glace à la vanille de Madagascar</span>
+                                </div>
+                            </div>
+                            <div class="validation_box flex row">
+                                <p class="m-0 menu_price">22€</p>
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
                         </div>
-                    </div>
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <div class="menu flex row">
+                            <div class="menu_card flex col">
+                                <p class="m-0 menu_title">Mousse au chocolat </p>
+                                <div class="menu_detail flex row space-between">
+                                    <span>Au piment d'Espelette et à la truffe noire</span>
+                                </div>
+                            </div>
+                            <div class="validation_box flex row">
+                                <p class="m-0 menu_price">23€</p>
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+                        </div>
+                    </label>
                 </div>
                 <div class="reservation reservation_page">
                     <a href="#">Commander</a>

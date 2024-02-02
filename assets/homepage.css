@@ -36,19 +36,24 @@
   font-size: 20px;
 }
 
-.restaurant_img img {
+.restaurant_img {
   width: 375px;
   height: 275px;
 }
 
 .restaurants_page {
   padding: 17px 17px 0 17px !important;
-  gap: 40px !important;
+  gap: 30px !important;
   background: #F6F6F6;
   position: relative;
-  top: -20px;
+  top: -40px;
+  border-top-left-radius: 28px;
+  border-top-right-radius: 28px;
 }
 
+.restaurants .restaurant_title {
+  margin-top: 10px;
+}
 .restaurants .restaurant_title h1 {
   font-family: Shrikhand;
   font-size: 28px;
@@ -65,11 +70,32 @@
   cursor: default;
   caret-color: transparent;
   margin-left: 30px;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+}
+.restaurants .restaurant_title input[type=checkbox]:checked + .heart {
+  transition: font-variation-settings 2s ease-in;
+  font-variation-settings: "FILL" 100;
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.restaurants .restaurant_title input[type=checkbox]:not(:checked) + heart {
+  transition: font-variation-settings 2s ease-in;
+  font-variation-settings: "FILL" 100;
+}
+.restaurants .restaurant_title input[type=checkbox] {
+  display: none;
 }
 .restaurants .menus {
   gap: 12px;
 }
-.restaurants .menus h2 {
+.restaurants .menus .menus_title {
+  width: 275px;
+  height: 27px;
+  gap: 5px;
+}
+.restaurants .menus .menus_title h2 {
   font-family: Roboto;
   font-size: 16px;
   font-weight: 300;
@@ -77,14 +103,25 @@
   letter-spacing: 0em;
   text-align: left;
 }
+.restaurants .menus .menus_title .underline {
+  width: 40px;
+  top: 27px;
+  border: 2px;
+  background: #99E2D0;
+  border: 2px solid #99E2D0;
+}
 .restaurants .menus .menu {
   background-color: #fff;
   border-radius: 15px;
   box-shadow: 0px 4.0114941597px 15.0431032181px 0px rgba(0, 0, 0, 0.1019607843);
-  gap: 5px;
-  padding: 15px;
+  position: relative;
+  overflow: hidden;
 }
-.restaurants .menus .menu .menu_title {
+.restaurants .menus .menu .menu_card {
+  padding: 15px;
+  gap: 5px;
+}
+.restaurants .menus .menu .menu_card .menu_title {
   font-family: Roboto;
   font-size: 18px;
   font-weight: 500;
@@ -92,7 +129,7 @@
   letter-spacing: 0em;
   text-align: left;
 }
-.restaurants .menus .menu span {
+.restaurants .menus .menu .menu_card span {
   font-family: Roboto;
   font-size: 15px;
   font-weight: 300;
@@ -100,21 +137,118 @@
   letter-spacing: 0em;
   text-align: left;
 }
-.restaurants .menus .menu .menu_price {
+.restaurants .menus .menu .validation_box {
+  width: 58px;
+  border-radius: 0px 15px 15px 0px;
+  background: #99E2D0;
+  position: absolute;
+  height: 74px;
+  transition: all 500ms ease;
+  -webkit-transition: all 500ms ease;
+  transform-origin: translateX(341px);
+  -webkit-transform-origin: translateX(341px);
+}
+.restaurants .menus .menu .validation_box i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: #fff;
+}
+.restaurants .menus .menu .validation_box p {
   font-family: Roboto;
   font-size: 15px;
   font-weight: 700;
-  line-height: 18px;
   letter-spacing: 0em;
-  text-align: center;
+  width: fit-content;
+  align-self: end;
+  margin-bottom: 15px;
+  right: 40px;
+  position: relative;
+}
+.restaurants .menus input[type=checkbox] {
+  display: none;
+}
+.restaurants .menus input[type=checkbox]:checked + .menu .validation_box {
+  transform: translateX(283px);
+}
+.restaurants .menus input[type=checkbox]:not(:checked) + .menu .validation_box {
+  transform: translateX(341px);
+}
+.restaurants .menus input[type=checkbox]:checked + .menu .menu_card {
+  animation: reduce 1s backwards;
+}
+.restaurants .menus input[type=checkbox]:checked + .menu .menu_title, .restaurants .menus input[type=checkbox]:checked + .menu span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 213px;
+}
+.restaurants .menus input[type=checkbox]:not(:checked) + .menu .menu_card {
+  animation: enlarge 1s forwards;
+}
+.restaurants .menus input[type=checkbox]:not(:checked) + .menu .menu_title, .restaurants .menus input[type=checkbox]:not(:checked) + .menu span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.restaurants .entrees {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+.restaurants .plats {
+  opacity: 0;
+  animation: fadeIn 3s forwards;
+}
+.restaurants .desserts {
+  opacity: 0;
+  animation: fadeIn 4s forwards;
 }
 .restaurants .reservation_page {
   padding: 0 !important;
 }
-.restaurants .reservation_page a {
-  margin: 0 0 40px !important;
-}
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes reduce {
+  0% {
+    width: 341px;
+  }
+  100% {
+    width: 253px;
+  }
+}
+@keyframes enlarge {
+  0% {
+    width: 253px;
+  }
+  100% {
+    width: 341px;
+  }
+}
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .m-0 {
   margin: 0;
 }
@@ -212,6 +346,9 @@
   letter-spacing: 0em;
   text-align: center;
   margin: 12px 0 12px;
+}
+.reservation a:hover {
+  background: linear-gradient(358.33deg, #9356DC -39.44%, #FF79DA 81.93%);
 }
 
 .fonctionnement {
@@ -379,7 +516,8 @@
   cursor: default;
   caret-color: transparent;
 }
-.restaurants .restaurant__box .restaurant__card .restaurant__card__details input[type=checkbox]:checked + .heart, .restaurants .restaurant__box .restaurant__card .restaurant__card__details .heart:hover {
+.restaurants .restaurant__box .restaurant__card .restaurant__card__details input[type=checkbox]:checked + .heart {
+  transition-duration: 2s;
   font-variation-settings: "FILL" 100;
   background: linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
