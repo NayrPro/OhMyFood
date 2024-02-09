@@ -63,8 +63,25 @@
   text-align: left;
   color: #101010;
 }
-.restaurants .restaurant_title .heart {
+.restaurants .restaurant_title .heart-container {
+  display: block;
+  position: relative;
+}
+.restaurants .restaurant_title .heart-container .heart {
   font-variation-settings: "FILL" 0;
+  position: absolute;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+.restaurants .restaurant_title .heart-container .heart-filled {
+  font-variation-settings: "FILL" 100;
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.restaurants .restaurant_title .heart-container .heart, .restaurants .restaurant_title .heart-container .heart-filled {
   font-weight: 100;
   font-size: 30px;
   cursor: default;
@@ -73,18 +90,19 @@
   -ms-user-select: none;
   -webkit-user-select: none;
 }
-.restaurants .restaurant_title input[type=checkbox]:checked + .heart {
-  transition: font-variation-settings 2s ease-in;
-  font-variation-settings: "FILL" 100;
-  background-image: linear-gradient(#9356DC, #FF79DA);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.restaurants .restaurant_title .heart-container input[type=checkbox]:checked + .heart {
+  opacity: 0;
 }
-.restaurants .restaurant_title input[type=checkbox]:not(:checked) + heart {
-  transition: font-variation-settings 2s ease-in;
-  font-variation-settings: "FILL" 100;
+.restaurants .restaurant_title .heart-container input[type=checkbox]:not(:checked) + .heart {
+  opacity: 1;
 }
-.restaurants .restaurant_title input[type=checkbox] {
+.restaurants .restaurant_title .heart-container input[type=checkbox]:checked + .heart + .heart-filled {
+  opacity: 1;
+}
+.restaurants .restaurant_title .heart-container input[type=checkbox]:not(:checked) + .heart + .heart-filled {
+  opacity: 0;
+}
+.restaurants .restaurant_title .heart-container input[type=checkbox] {
   display: none;
 }
 .restaurants .menus {
@@ -249,6 +267,30 @@
     transform: rotate(360deg);
   }
 }
+@keyframes jumpInOut {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-60px);
+  }
+}
+@keyframes hideElement {
+  0% {
+    display: block;
+  }
+  90%, 100% {
+    display: none;
+  }
+}
+@keyframes showElement {
+  0% {
+    display: none;
+  }
+  90%, 100% {
+    display: block;
+  }
+}
 .m-0 {
   margin: 0;
 }
@@ -258,6 +300,11 @@
   margin-left: auto;
   margin-right: auto;
   background: #F6F6F6;
+}
+
+.loader + .homepage {
+  animation: showElement 3s linear;
+  display: block;
 }
 
 .header {
@@ -506,22 +553,47 @@
   letter-spacing: 0em;
   text-align: left;
 }
-.restaurants .restaurant__box .restaurant__card .restaurant__card__details input[type=checkbox] {
-  display: none;
+.restaurants .restaurant__box .restaurant__card .restaurant__card__details .heart-container {
+  display: block;
+  position: relative;
 }
-.restaurants .restaurant__box .restaurant__card .restaurant__card__details .heart {
+.restaurants .restaurant__box .restaurant__card .restaurant__card__details .heart-container .heart {
   font-variation-settings: "FILL" 0;
+  position: absolute;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+.restaurants .restaurant__box .restaurant__card .restaurant__card__details .heart-container .heart-filled {
+  font-variation-settings: "FILL" 100;
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.restaurants .restaurant__box .restaurant__card .restaurant__card__details .heart-container .heart, .restaurants .restaurant__box .restaurant__card .restaurant__card__details .heart-container .heart-filled {
   font-weight: 100;
   font-size: 30px;
   cursor: default;
   caret-color: transparent;
+  margin-left: 30px;
+  -ms-user-select: none;
+  -webkit-user-select: none;
 }
-.restaurants .restaurant__box .restaurant__card .restaurant__card__details input[type=checkbox]:checked + .heart {
-  transition-duration: 2s;
-  font-variation-settings: "FILL" 100;
-  background: linear-gradient(#9356DC, #FF79DA);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.restaurants .restaurant__box .restaurant__card .restaurant__card__details .heart-container input[type=checkbox]:checked + .heart {
+  opacity: 0;
+}
+.restaurants .restaurant__box .restaurant__card .restaurant__card__details .heart-container input[type=checkbox]:not(:checked) + .heart {
+  opacity: 1;
+}
+.restaurants .restaurant__box .restaurant__card .restaurant__card__details .heart-container input[type=checkbox]:checked + .heart + .heart-filled {
+  opacity: 1;
+}
+.restaurants .restaurant__box .restaurant__card .restaurant__card__details .heart-container input[type=checkbox]:not(:checked) + .heart + .heart-filled {
+  opacity: 0;
+}
+.restaurants .restaurant__box .restaurant__card .restaurant__card__details .heart-container input[type=checkbox] {
+  display: none;
 }
 .restaurants .restaurant__box .la_note_enchantee img {
   object-position: 0% 61%;
@@ -570,6 +642,25 @@
   line-height: 19px;
   letter-spacing: 0em;
   text-align: left;
+}
+
+.loader {
+  width: 375px;
+  margin-left: auto;
+  margin-right: auto;
+  background: white;
+  height: 1080px;
+  animation: hideElement 3s linear;
+  display: none;
+}
+.loader i {
+  font-size: 100px;
+  position: absolute;
+  top: 50%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+  color: rgb(147, 86, 220);
+  animation: jumpInOut 2s ease-in-out infinite;
 }
 
 /*# sourceMappingURL=homepage.css.map */
