@@ -224,6 +224,7 @@
   animation: fadeIn 4s forwards;
 }
 .restaurants .reservation_page {
+  position: relative;
   padding: 0 !important;
 }
 
@@ -372,14 +373,18 @@
   letter-spacing: 0em;
   text-align: center;
 }
-.reservation a {
+
+.gradient_container {
+  position: relative;
+}
+
+.gradient_link, .gradient_link_hover {
   display: inline-block;
   color: #FFFFFF;
   width: 218px;
   padding: 15.5px 0;
   border: none;
   border-radius: 25px;
-  background: linear-gradient(359.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
   text-decoration: none;
   font-family: Roboto;
@@ -390,8 +395,23 @@
   text-align: center;
   margin: 12px 0 12px;
 }
-.reservation a:hover {
+
+.gradient_link {
+  position: absolute;
+  background: linear-gradient(359.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  z-index: 2;
+}
+
+.gradient_link_hover {
+  position: relative;
   background: linear-gradient(358.33deg, #9356DC -39.44%, #FF79DA 81.93%);
+  opacity: 0;
+  z-index: 3;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.gradient_container:hover .gradient_link_hover {
+  opacity: 1;
 }
 
 .fonctionnement {
