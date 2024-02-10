@@ -285,10 +285,10 @@
 }
 @keyframes showElement {
   0% {
-    display: none;
+    visibility: hidden;
   }
-  90%, 100% {
-    display: block;
+  100% {
+    visibility: visible;
   }
 }
 .m-0 {
@@ -300,11 +300,7 @@
   margin-left: auto;
   margin-right: auto;
   background: #F6F6F6;
-}
-
-.loader + .homepage {
-  animation: showElement 3s linear;
-  display: block;
+  visibility: visible;
 }
 
 .header {
@@ -645,21 +641,23 @@
 }
 
 .loader {
-  width: 375px;
-  margin-left: auto;
-  margin-right: auto;
   background: white;
   height: 1080px;
+  position: fixed;
+  z-index: 3000000;
+  width: 100%;
   animation: hideElement 3s linear;
   display: none;
 }
-.loader i {
+.loader .loader-icon {
   font-size: 100px;
-  position: absolute;
+  position: fixed;
   top: 50%;
-  left: 47%;
+  left: 50%;
   transform: translate(-50%, -50%);
   color: rgb(147, 86, 220);
+}
+.loader .loader-icon i {
   animation: jumpInOut 2s ease-in-out infinite;
 }
 
