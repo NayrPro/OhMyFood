@@ -228,6 +228,34 @@
   padding: 0 !important;
 }
 
+@media (min-width: 1440px) {
+  .homepage-restaurant {
+    background: #fff !important;
+  }
+  .homepage-restaurant .restaurant_img {
+    width: 1440px;
+    height: 383px;
+    object-fit: cover;
+  }
+  .homepage-restaurant .main-restaurant {
+    width: 1055px;
+    background: #F6F6F6;
+    margin: auto;
+  }
+  .homepage-restaurant .main-restaurant .menus {
+    width: 634px;
+    margin: auto;
+  }
+  .homepage-restaurant .main-restaurant .menus input[type=checkbox]:checked + .menu .validation_box {
+    transform: translateX(576px);
+  }
+  .homepage-restaurant .main-restaurant .menus input[type=checkbox]:not(:checked) + .menu .validation_box {
+    transform: translateX(634px);
+  }
+  .homepage-restaurant .main-restaurant .restaurant_title {
+    align-self: center;
+  }
+}
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -430,10 +458,15 @@
   letter-spacing: 0em;
   text-align: left;
 }
-.fonctionnement .fonctionnement__box {
+.fonctionnement .fonctionnement__container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.fonctionnement .fonctionnement__container .fonctionnement__box {
   width: 335px;
 }
-.fonctionnement .fonctionnement__box .fonctionnement__content {
+.fonctionnement .fonctionnement__container .fonctionnement__box .fonctionnement__content {
   width: 322.49px;
   height: 72.38px;
   border-radius: 20px;
@@ -445,7 +478,7 @@
   position: relative;
   left: 12px;
 }
-.fonctionnement .fonctionnement__box .fonctionnement__content .fonctionnement__number {
+.fonctionnement .fonctionnement__container .fonctionnement__box .fonctionnement__content .fonctionnement__number {
   position: relative;
   left: -12px;
   width: 24px;
@@ -453,7 +486,7 @@
   background: rgb(147, 86, 220);
   border-radius: 50%;
 }
-.fonctionnement .fonctionnement__box .fonctionnement__content .fonctionnement__number span {
+.fonctionnement .fonctionnement__container .fonctionnement__box .fonctionnement__content .fonctionnement__number span {
   color: #FFFFFF;
   font-family: Roboto;
   font-size: 14px;
@@ -464,19 +497,19 @@
   justify-content: center;
   height: inherit;
 }
-.fonctionnement .fonctionnement__box .fonctionnement__content .fonctionnement__details {
+.fonctionnement .fonctionnement__container .fonctionnement__box .fonctionnement__content .fonctionnement__details {
   display: flex;
   flex-direction: row;
   align-items: end;
   gap: 25px;
 }
-.fonctionnement .fonctionnement__box .fonctionnement__content .fonctionnement__details span {
+.fonctionnement .fonctionnement__container .fonctionnement__box .fonctionnement__content .fonctionnement__details span {
   color: rgb(126, 126, 126);
 }
-.fonctionnement .fonctionnement__box .fonctionnement__content .fonctionnement__details i {
+.fonctionnement .fonctionnement__container .fonctionnement__box .fonctionnement__content .fonctionnement__details i {
   color: rgb(147, 86, 220);
 }
-.fonctionnement .fonctionnement__box .fonctionnement__content .fonctionnement__details p {
+.fonctionnement .fonctionnement__container .fonctionnement__box .fonctionnement__content .fonctionnement__details p {
   font-family: Roboto;
   font-size: 16px;
   font-weight: 500;
@@ -679,6 +712,79 @@
 }
 .loader .loader-icon i {
   animation: jumpInOut 2s ease-in-out infinite;
+}
+
+@media (min-width: 1440px) {
+  .homepage {
+    width: 1440px;
+  }
+  .homepage .header-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .homepage .header-logo .logo img {
+    width: 200px;
+  }
+  .homepage .reservation {
+    padding: 31px;
+    gap: 20px;
+  }
+  .homepage .reservation h2 {
+    width: 645px;
+  }
+  .homepage .reservation p {
+    width: 531px;
+  }
+  .homepage .reservation .gradient_container a {
+    margin: 0;
+  }
+  .homepage .fonctionnement {
+    padding: 50px 180px 50px 180px;
+  }
+  .homepage .fonctionnement .fonctionnement__container {
+    gap: 25px;
+    display: flex;
+    flex-direction: row;
+  }
+  .homepage .restaurants {
+    padding: 30px 180px 30px 180px;
+  }
+  .homepage .restaurants .restaurant__box {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 15px;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 84px;
+  }
+  .homepage .restaurants .restaurant__box .restaurant__card {
+    width: 490px;
+  }
+  .homepage .restaurants .restaurant__box .restaurant__card img {
+    width: 490px;
+  }
+  .homepage .restaurants .restaurant__box .restaurant__card .card__tag {
+    left: 392px;
+  }
+  .homepage .footer {
+    background: #353535;
+    color: #FFFFFF;
+    padding: 77px 25px 21px 25px;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 73px;
+  }
+  .homepage .footer img {
+    margin-right: 46px;
+  }
+  .homepage .footer .footer__content {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+  }
+  .homepage .footer .partenaire_link {
+    margin-right: 30px;
+  }
 }
 
 /*# sourceMappingURL=homepage.css.map */
