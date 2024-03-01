@@ -90,18 +90,6 @@
   -ms-user-select: none;
   -webkit-user-select: none;
 }
-.restaurants .restaurant_title .heart-container input[type=checkbox]:checked + .heart {
-  opacity: 0;
-}
-.restaurants .restaurant_title .heart-container input[type=checkbox]:not(:checked) + .heart {
-  opacity: 1;
-}
-.restaurants .restaurant_title .heart-container input[type=checkbox]:checked + .heart + .heart-filled {
-  opacity: 1;
-}
-.restaurants .restaurant_title .heart-container input[type=checkbox]:not(:checked) + .heart + .heart-filled {
-  opacity: 0;
-}
 .restaurants .restaurant_title .heart-container input[type=checkbox] {
   display: none;
 }
@@ -228,7 +216,7 @@
   padding: 0 !important;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 950px) {
   .menu_title, span {
     overflow: visible !important;
     text-overflow: unset !important;
@@ -260,7 +248,7 @@
     align-self: center;
   }
 }
-@media (min-width: 640px) and (max-width: 1439px) {
+@media (min-width: 640px) and (max-width: 950px) {
   .menu_title, span {
     overflow: visible !important;
     text-overflow: unset !important;
@@ -278,6 +266,23 @@
   }
   .menus input[type=checkbox]:not(:checked) + .menu .validation_box {
     transform: translateX(608px) !important;
+  }
+}
+@media (max-width: 950px) {
+  .heart-container input[type=checkbox]:checked + .heart {
+    opacity: 0;
+  }
+  .heart-container input[type=checkbox]:not(:checked) + .heart {
+    opacity: 1;
+  }
+  .heart-container input[type=checkbox]:checked + .heart + .heart-filled {
+    opacity: 1;
+  }
+  .heart-container input[type=checkbox]:not(:checked) + .heart + .heart-filled {
+    opacity: 0;
+  }
+  .heart-container input[type=checkbox] {
+    display: none;
   }
 }
 @keyframes fadeIn {
@@ -653,18 +658,6 @@
   -ms-user-select: none;
   -webkit-user-select: none;
 }
-.restaurants .restaurant__box .restaurant__card .restaurant__card__details .heart-container input[type=checkbox]:checked + .heart {
-  opacity: 0;
-}
-.restaurants .restaurant__box .restaurant__card .restaurant__card__details .heart-container input[type=checkbox]:not(:checked) + .heart {
-  opacity: 1;
-}
-.restaurants .restaurant__box .restaurant__card .restaurant__card__details .heart-container input[type=checkbox]:checked + .heart + .heart-filled {
-  opacity: 1;
-}
-.restaurants .restaurant__box .restaurant__card .restaurant__card__details .heart-container input[type=checkbox]:not(:checked) + .heart + .heart-filled {
-  opacity: 0;
-}
 .restaurants .restaurant__box .restaurant__card .restaurant__card__details .heart-container input[type=checkbox] {
   display: none;
 }
@@ -738,7 +731,7 @@
   animation: jumpInOut 2s ease-in-out infinite;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 950px) {
   .heart-container input[type=checkbox]:hover + .heart {
     opacity: 0 !important;
   }
@@ -819,7 +812,7 @@
     margin-right: 30px;
   }
 }
-@media (min-width: 640px) and (max-width: 1440px) {
+@media (min-width: 640px) and (max-width: 950px) {
   .homepage {
     width: 640px;
   }
@@ -848,6 +841,23 @@
   }
   .restaurants .restaurant__box .restaurant__card img {
     width: auto;
+  }
+}
+@media (max-width: 950px) {
+  .restaurant__card__details .heart-container input[type=checkbox]:checked + .heart {
+    opacity: 0 !important;
+  }
+  .restaurant__card__details .heart-container input[type=checkbox]:not(:checked) + .heart {
+    opacity: 1 !important;
+  }
+  .restaurant__card__details .heart-container input[type=checkbox]:checked + .heart + .heart-filled {
+    opacity: 1 !important;
+  }
+  .restaurant__card__details .heart-container input[type=checkbox]:not(:checked) + .heart + .heart-filled {
+    opacity: 0 !important;
+  }
+  .restaurant__card__details .heart-container input[type=checkbox] {
+    display: none;
   }
 }
 
