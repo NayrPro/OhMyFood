@@ -1,0 +1,32 @@
+@media (min-width : 950px) {
+    .menu_title, span{
+        overflow: visible !important;
+        text-overflow: unset !important;
+    }
+    .homepage-restaurant{
+        background: #fff !important;
+        .restaurant_img {
+           width: 1440px;
+           height: 383px;
+           object-fit: cover;
+        }
+        .main-restaurant{
+        width: 1055px;
+        background: #F6F6F6;
+        margin: auto;
+        .menus {
+                width: 634px;
+                margin: auto;
+            input[type=checkbox]:hover + .menu .validation_box {
+                transform: translateX(576px);
+            }
+            input[type=checkbox]:not(:hover) + .menu .validation_box {
+                    transform: translateX(634px);
+            }
+        }
+        .restaurant_title{
+                align-self: center;
+        }
+        }
+    }
+}

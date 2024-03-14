@@ -1,0 +1,21 @@
+@media (max-width: 950px){
+    .restaurant__card__details{
+    .heart-container{
+        input[type=checkbox]:checked + .heart{
+            opacity: 0 !important;
+        }
+        input[type=checkbox]:not(:checked) + .heart{
+            opacity: 1 !important;
+        }
+        input[type=checkbox]:checked + .heart + .heart-filled{
+            opacity: 1 !important;
+        }
+        input[type=checkbox]:not(:checked) + .heart + .heart-filled{
+            opacity: 0 !important;
+            
+        }
+        input[type=checkbox]{
+            display: none;
+        }
+    }}
+}

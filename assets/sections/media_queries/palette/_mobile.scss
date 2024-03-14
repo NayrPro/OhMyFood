@@ -1,0 +1,45 @@
+@media (min-width : 640px) and (max-width : 950px) {
+    .menu_title, span{
+        overflow: visible !important;
+        text-overflow: unset !important;
+    }
+    .restaurant_title{
+        align-self: center;
+    }
+
+    .restaurant_img {
+        height: 275px;
+        width: 100% !important;
+        object-fit: cover;
+    }
+    .menus{
+        input[type=checkbox]:checked + .menu .validation_box {
+            transform: translateX(548px) !important;
+        }
+        input[type=checkbox]:not(:checked) + .menu .validation_box {
+                transform: translateX(608px) !important;
+        }
+    }
+
+}
+
+@media (max-width: 950px){
+    .heart-container{
+        input[type=checkbox]:checked + .heart{
+            opacity: 0;
+        }
+        input[type=checkbox]:not(:checked) + .heart{
+            opacity: 1;
+        }
+        input[type=checkbox]:checked + .heart + .heart-filled{
+            opacity: 1;
+        }
+        input[type=checkbox]:not(:checked) + .heart + .heart-filled{
+            opacity: 0;
+            
+        }
+        input[type=checkbox]{
+            display: none;
+        }
+    }
+}

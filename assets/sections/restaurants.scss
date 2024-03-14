@@ -1,0 +1,74 @@
+.restaurants{
+    @include flex-column;
+    padding: 54px 20px;
+    gap: 20px;
+    h2{
+        @include section-heading(auto, Roboto, 24px, 700, 28px, normal);
+    }
+    .restaurant__box{
+        width: 340px;
+        @include flex-column;
+        gap: 15px;
+        .restaurant__card {
+            height: 251px;
+            @include flex-column;
+            gap: 0px;
+            position: relative;
+            img{
+                object-fit: cover;
+                height: 179px;
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+                width: 340px;
+            }
+            .card__tag{
+                width: 80px;
+                height: 26px;
+                position: absolute;
+                background: rgba(153, 226, 208, 1);
+                box-shadow: $box-shadow rgba(0, 0, 0, 0.15);
+                top: 11px;
+                left: 248px;
+                span{
+                    @include section-heading(inherit, Roboto, 14px, 500, 16px, 0em);
+                    text-align: center;
+                    color: rgba(0, 135, 102, 1);
+                    display: inline-flex;
+                    @include flex-centered-elt;
+                    height: inherit;
+                }
+            }
+            .restaurant__card__details{
+                @include flex-row;
+                justify-content: space-between;
+                background-color: $white-color;
+                padding: 15px 20px 15px 10px;
+                border-bottom-left-radius: 15px;
+                border-bottom-right-radius: 15px;
+                a{
+                    text-decoration: none;
+                    color: black;
+                
+                    .restaurant__card__description{
+                        .restaurant__card__title{
+                            @include section-heading(auto, Roboto, 18px, 700, 21px, 0em);
+                            text-align: left;
+            
+                        }
+                        .restaurant__card__location{
+                            @include section-heading(auto, Roboto, 17px, 300, 20px, 0em);
+                            text-align: left;
+            
+                        }
+                    }
+                }
+                @include heart;
+            }
+        }
+        .la_note_enchantee{
+            img{
+                object-position: 0% 61%;
+            }
+        }
+    }
+}

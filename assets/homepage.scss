@@ -1,0 +1,129 @@
+@import 'flex.scss';
+@import 'palette.scss';
+@import 'keyframes.scss';
+@import 'mixins.scss';
+@import 'variables.scss';
+@import './sections/fonctionnements.scss';
+@import './sections/restaurants.scss';
+@import './sections/footer.scss';
+@import './sections/media_queries/homepage/_desktop.scss';
+@import './sections/media_queries/homepage/_tablet.scss';
+@import './sections/media_queries/homepage/_mobile.scss';
+
+.m-0{
+    margin: 0;
+}
+
+.homepage{
+    width: 375px;
+    @include centered-block;
+    background: #F6F6F6;
+    visibility: visible;
+}
+
+.header{
+    height: 113px;
+}
+
+.header-logo{
+    background: $white-color;
+    box-shadow: $box-shadow #00000026;
+    position: relative;
+    padding: 14px 89px;
+}
+
+.logo{
+    width: 197px;
+    height: 36px;
+    text-align: center;
+    img{
+        width: 162px;
+        height: 44px;
+    }
+}
+
+.location{
+    height: 50px;
+    @include flex-row;
+    @include flex-centered-elt;
+    gap: 15px;
+    background-color: $background-color;
+    i{
+        color: $dark-color;
+    }
+    input{
+        @include section-heading(110px, Roboto, 16px, 500, 19px, normal);
+        border: none;
+        background-color: $background-color;
+        outline: none;
+    }
+}
+
+.reservation{
+    padding: 39px;
+    @include flex-column;
+    align-items: center;
+    gap: 15px;
+    h2{
+        @include section-heading(275px, Roboto, 24px, 700, 28px, 0em);
+        text-align: center;
+    }
+    p{
+        @include section-heading(315px, Roboto, 18px, 300, 21px, 0em);
+        text-align: center;
+    }
+}
+
+.gradient_container{
+    position: relative;
+}
+
+.gradient_link, .gradient_link_hover{
+    display: inline-block;
+    color: $white-color;
+    @include section-heading(218px, Roboto, 16px, 500, 19px, 0em);
+    padding: 15.5px 0;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0px 4px 10px 0px #00000040;
+    text-decoration: none;
+    text-align: center;
+    margin: 12px 0 12px;
+}
+
+.gradient_link{
+    position: absolute;
+    background: linear-gradient(359.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    z-index: 2;
+}
+.gradient_link_hover{
+    position: relative;
+    background: linear-gradient(358.33deg, #9356DC -39.44%, #FF79DA 81.93%);
+    opacity: 0;
+    z-index: 3;
+    transition: opacity .5s ease-in-out;
+}
+.gradient_container:hover .gradient_link_hover{
+    opacity: 1;
+}
+
+.loader{
+    background: white;
+    height: 1080px;
+    position: fixed;
+    z-index: 3000000;
+    width: 100%;
+    animation: hideElement 3s linear;
+    display: none;
+    .loader-icon{
+        font-size: 100px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        color: rgb(147, 86, 220);
+        i{
+            animation: jumpInOut 2s ease-in-out infinite;
+        }
+    }
+}

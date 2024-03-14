@@ -1,0 +1,61 @@
+@mixin section-heading($width, $font-family, $font-size, $font-weight, $line-height, $letter-spacing){
+    width: $width;
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    letter-spacing: $letter-spacing;
+}
+
+@mixin flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-centered-elt{
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin centered-block{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+@mixin heart{
+    .heart-container{
+        display: block;
+        position: relative;
+        .heart{
+            font-variation-settings: 'FILL' 0;
+            position: absolute;
+            opacity: 1;
+            transition: opacity .5s ease-in-out;
+        }
+        .heart-filled{
+            font-variation-settings: 'FILL' 100;
+            background-image: linear-gradient(#9356DC, #FF79DA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 0;
+            transition: opacity .5s ease-in-out;
+        }
+        .heart, .heart-filled {
+            font-weight: 100;
+            font-size: 30px;
+            cursor: default;
+            caret-color: transparent;
+            margin-left: 30px;
+            -ms-user-select: none;
+            -webkit-user-select: none;
+        }
+        input[type=checkbox]{
+            display: none;
+        }
+    }
+}

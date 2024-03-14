@@ -1,0 +1,85 @@
+@media (min-width : 950px) {
+    .heart-container{
+        input[type=checkbox]:hover + .heart{
+            opacity: 0 !important;
+        }
+        input[type=checkbox]:not(:hover) + .heart{
+            opacity: 1 !important;
+        }
+        input[type=checkbox]:hover + .heart + .heart-filled{
+            opacity: 1 !important;
+        }
+    }
+
+    .homepage{
+        width: 1440px !important;
+        .header-logo{
+            @include flex-column;
+            align-items: center;
+            .logo img {
+                width: 200px;
+            }
+        }
+
+        .reservation {
+            padding: 31px;
+            gap: 20px;
+            h2{
+                width: 645px;
+            }
+            p {
+                width: 531px;
+            }
+            .gradient_container a{
+                margin: 0;
+            }
+        }
+        
+        .fonctionnement{
+            padding: 50px 180px 50px 180px;
+            .fonctionnement__container{
+                gap: 25px;
+                @include flex-row;
+            }
+        }
+        .restaurants{
+            padding: 30px 180px 30px 180px;
+            .restaurant__box{
+                display: grid;
+                grid-template-rows: 1fr 1fr;
+                grid-row-gap: 15px;
+                grid-template-columns: 1fr 1fr;
+                grid-column-gap: 84px;
+                .restaurant__card {
+                    width: 490px;
+                    img{
+                    width: 490px;
+                    }
+                    .card__tag{
+                    left: 392px;
+                    }
+                }
+            }
+        }
+    
+        .footer {
+            background: $dark-color;
+            color: $white-color;
+            padding: 77px 25px 21px 25px;
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 73px;
+            img{
+                margin-right: 46px;
+            }
+            .footer__content {
+                @include flex-row;
+                gap: 8px;
+            }
+            .partenaire_link{
+                margin-right: 30px;
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,37 @@
+@media (min-width : 641px) and (max-width : 950px) {
+
+    .homepage{
+        width: 640px !important;
+    }
+
+    .logo{
+        @include centered-block;
+    }
+
+    .fonctionnement{
+        h2{
+            @include centered-block;
+            text-align: center;
+        }
+        .fonctionnement__box {
+            width: auto !important;
+            margin: 0;
+            .fonctionnement__content {
+                width: auto !important;
+                gap: 140px;
+            }
+        }
+    }
+
+    .restaurants .restaurant__box {
+        width: auto;
+        .restaurant__card{
+            .card__tag {
+                left: 508px;
+            }
+            img {
+                width: auto;
+            }
+        }
+    }
+}

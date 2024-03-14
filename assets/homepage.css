@@ -22,6 +22,75 @@
   flex-direction: column;
 }
 
+@media (min-width: 950px) {
+  .menu_title, span {
+    overflow: visible !important;
+    text-overflow: unset !important;
+  }
+  .homepage-restaurant {
+    background: #fff !important;
+  }
+  .homepage-restaurant .restaurant_img {
+    width: 1440px;
+    height: 383px;
+    object-fit: cover;
+  }
+  .homepage-restaurant .main-restaurant {
+    width: 1055px;
+    background: #F6F6F6;
+    margin: auto;
+  }
+  .homepage-restaurant .main-restaurant .menus {
+    width: 634px;
+    margin: auto;
+  }
+  .homepage-restaurant .main-restaurant .menus input[type=checkbox]:hover + .menu .validation_box {
+    transform: translateX(576px);
+  }
+  .homepage-restaurant .main-restaurant .menus input[type=checkbox]:not(:hover) + .menu .validation_box {
+    transform: translateX(634px);
+  }
+  .homepage-restaurant .main-restaurant .restaurant_title {
+    align-self: center;
+  }
+}
+@media (min-width: 640px) and (max-width: 950px) {
+  .menu_title, span {
+    overflow: visible !important;
+    text-overflow: unset !important;
+  }
+  .restaurant_title {
+    align-self: center;
+  }
+  .restaurant_img {
+    height: 275px;
+    width: 100% !important;
+    object-fit: cover;
+  }
+  .menus input[type=checkbox]:checked + .menu .validation_box {
+    transform: translateX(548px) !important;
+  }
+  .menus input[type=checkbox]:not(:checked) + .menu .validation_box {
+    transform: translateX(608px) !important;
+  }
+}
+@media (max-width: 950px) {
+  .heart-container input[type=checkbox]:checked + .heart {
+    opacity: 0;
+  }
+  .heart-container input[type=checkbox]:not(:checked) + .heart {
+    opacity: 1;
+  }
+  .heart-container input[type=checkbox]:checked + .heart + .heart-filled {
+    opacity: 1;
+  }
+  .heart-container input[type=checkbox]:not(:checked) + .heart + .heart-filled {
+    opacity: 0;
+  }
+  .heart-container input[type=checkbox] {
+    display: none;
+  }
+}
 .back {
   position: absolute;
   top: 17px;
@@ -55,6 +124,7 @@
   margin-top: 10px;
 }
 .restaurants .restaurant_title h1 {
+  width: auto;
   font-family: Shrikhand;
   font-size: 28px;
   font-weight: 400;
@@ -102,6 +172,7 @@
   gap: 5px;
 }
 .restaurants .menus .menus_title h2 {
+  width: auto;
   font-family: Roboto;
   font-size: 16px;
   font-weight: 300;
@@ -128,6 +199,7 @@
   gap: 5px;
 }
 .restaurants .menus .menu .menu_card .menu_title {
+  width: auto;
   font-family: Roboto;
   font-size: 18px;
   font-weight: 500;
@@ -136,6 +208,7 @@
   text-align: left;
 }
 .restaurants .menus .menu .menu_card span {
+  width: auto;
   font-family: Roboto;
   font-size: 15px;
   font-weight: 300;
@@ -216,75 +289,6 @@
   padding: 0 !important;
 }
 
-@media (min-width: 950px) {
-  .menu_title, span {
-    overflow: visible !important;
-    text-overflow: unset !important;
-  }
-  .homepage-restaurant {
-    background: #fff !important;
-  }
-  .homepage-restaurant .restaurant_img {
-    width: 1440px;
-    height: 383px;
-    object-fit: cover;
-  }
-  .homepage-restaurant .main-restaurant {
-    width: 1055px;
-    background: #F6F6F6;
-    margin: auto;
-  }
-  .homepage-restaurant .main-restaurant .menus {
-    width: 634px;
-    margin: auto;
-  }
-  .homepage-restaurant .main-restaurant .menus input[type=checkbox]:hover + .menu .validation_box {
-    transform: translateX(576px);
-  }
-  .homepage-restaurant .main-restaurant .menus input[type=checkbox]:not(:hover) + .menu .validation_box {
-    transform: translateX(634px);
-  }
-  .homepage-restaurant .main-restaurant .restaurant_title {
-    align-self: center;
-  }
-}
-@media (min-width: 640px) and (max-width: 950px) {
-  .menu_title, span {
-    overflow: visible !important;
-    text-overflow: unset !important;
-  }
-  .restaurant_title {
-    align-self: center;
-  }
-  .restaurant_img {
-    height: 275px;
-    width: 100%;
-    object-fit: cover;
-  }
-  .menus input[type=checkbox]:checked + .menu .validation_box {
-    transform: translateX(548px) !important;
-  }
-  .menus input[type=checkbox]:not(:checked) + .menu .validation_box {
-    transform: translateX(608px) !important;
-  }
-}
-@media (max-width: 950px) {
-  .heart-container input[type=checkbox]:checked + .heart {
-    opacity: 0;
-  }
-  .heart-container input[type=checkbox]:not(:checked) + .heart {
-    opacity: 1;
-  }
-  .heart-container input[type=checkbox]:checked + .heart + .heart-filled {
-    opacity: 1;
-  }
-  .heart-container input[type=checkbox]:not(:checked) + .heart + .heart-filled {
-    opacity: 0;
-  }
-  .heart-container input[type=checkbox] {
-    display: none;
-  }
-}
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -349,128 +353,6 @@
     visibility: visible;
   }
 }
-.m-0 {
-  margin: 0;
-}
-
-.homepage {
-  width: 375px;
-  margin-left: auto;
-  margin-right: auto;
-  background: #F6F6F6;
-  visibility: visible;
-}
-
-.header {
-  height: 113px;
-}
-
-.header-logo {
-  background: #FFFFFF;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
-  position: relative;
-  padding: 14px 89px;
-}
-
-.logo {
-  width: 197px;
-  height: 36px;
-  text-align: center;
-}
-.logo img {
-  width: 162px;
-  height: 44px;
-}
-
-.location {
-  height: 50px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  background-color: #EAEAEA;
-}
-.location i {
-  color: #353535;
-}
-.location input {
-  width: 110px;
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 19px;
-  border: none;
-  background-color: #EAEAEA;
-  outline: none;
-}
-
-.reservation {
-  padding: 39px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-}
-.reservation h2 {
-  width: 275px;
-  font-family: Roboto;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 28px;
-  letter-spacing: 0em;
-  text-align: center;
-}
-.reservation p {
-  width: 315px;
-  font-family: Roboto;
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 21px;
-  letter-spacing: 0em;
-  text-align: center;
-}
-
-.gradient_container {
-  position: relative;
-}
-
-.gradient_link, .gradient_link_hover {
-  display: inline-block;
-  color: #FFFFFF;
-  width: 218px;
-  padding: 15.5px 0;
-  border: none;
-  border-radius: 25px;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
-  text-decoration: none;
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 19px;
-  letter-spacing: 0em;
-  text-align: center;
-  margin: 12px 0 12px;
-}
-
-.gradient_link {
-  position: absolute;
-  background: linear-gradient(359.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-  z-index: 2;
-}
-
-.gradient_link_hover {
-  position: relative;
-  background: linear-gradient(358.33deg, #9356DC -39.44%, #FF79DA 81.93%);
-  opacity: 0;
-  z-index: 3;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.gradient_container:hover .gradient_link_hover {
-  opacity: 1;
-}
-
 .fonctionnement {
   background-color: #FFFFFF;
   display: flex;
@@ -517,10 +399,12 @@
 }
 .fonctionnement .fonctionnement__container .fonctionnement__box .fonctionnement__content .fonctionnement__number span {
   color: #FFFFFF;
+  width: 24px;
   font-family: Roboto;
   font-size: 14px;
   font-weight: 500;
-  width: 24px;
+  line-height: normal;
+  letter-spacing: normal;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -539,6 +423,7 @@
   color: rgb(147, 86, 220);
 }
 .fonctionnement .fonctionnement__container .fonctionnement__box .fonctionnement__content .fonctionnement__details p {
+  width: auto;
   font-family: Roboto;
   font-size: 16px;
   font-weight: 500;
@@ -554,10 +439,12 @@
   gap: 20px;
 }
 .restaurants h2 {
+  width: auto;
   font-family: Roboto;
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
+  letter-spacing: normal;
 }
 .restaurants .restaurant__box {
   width: 340px;
@@ -589,6 +476,7 @@
   left: 248px;
 }
 .restaurants .restaurant__box .restaurant__card .card__tag span {
+  width: inherit;
   font-family: Roboto;
   font-size: 14px;
   font-weight: 500;
@@ -600,7 +488,6 @@
   align-items: center;
   justify-content: center;
   height: inherit;
-  width: inherit;
 }
 .restaurants .restaurant__box .restaurant__card .restaurant__card__details {
   display: flex;
@@ -616,6 +503,7 @@
   color: black;
 }
 .restaurants .restaurant__box .restaurant__card .restaurant__card__details a .restaurant__card__description .restaurant__card__title {
+  width: auto;
   font-family: Roboto;
   font-size: 18px;
   font-weight: 700;
@@ -624,6 +512,7 @@
   text-align: left;
 }
 .restaurants .restaurant__box .restaurant__card .restaurant__card__details a .restaurant__card__description .restaurant__card__location {
+  width: auto;
   font-family: Roboto;
   font-size: 17px;
   font-weight: 300;
@@ -690,6 +579,7 @@
   gap: 10px;
 }
 .footer .footer__content a .footer__bold p {
+  width: auto;
   font-family: Roboto;
   font-size: 16px;
   font-weight: 500;
@@ -702,33 +592,13 @@
   line-height: 19px;
 }
 .footer .footer__content a .footer__regular {
+  width: auto;
   font-family: Roboto;
   font-size: 16px;
   font-weight: 300;
   line-height: 19px;
   letter-spacing: 0em;
   text-align: left;
-}
-
-.loader {
-  background: white;
-  height: 1080px;
-  position: fixed;
-  z-index: 3000000;
-  width: 100%;
-  animation: hideElement 3s linear;
-  display: none;
-}
-.loader .loader-icon {
-  font-size: 100px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: rgb(147, 86, 220);
-}
-.loader .loader-icon i {
-  animation: jumpInOut 2s ease-in-out infinite;
 }
 
 @media (min-width: 950px) {
@@ -742,7 +612,7 @@
     opacity: 1 !important;
   }
   .homepage {
-    width: 1440px;
+    width: 1440px !important;
   }
   .homepage .header-logo {
     display: flex;
@@ -812,9 +682,9 @@
     margin-right: 30px;
   }
 }
-@media (min-width: 640px) and (max-width: 950px) {
+@media (min-width: 641px) and (max-width: 950px) {
   .homepage {
-    width: 640px;
+    width: 640px !important;
   }
   .logo {
     margin-left: auto;
@@ -859,6 +729,149 @@
   .restaurant__card__details .heart-container input[type=checkbox] {
     display: none;
   }
+}
+.m-0 {
+  margin: 0;
+}
+
+.homepage {
+  width: 375px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #F6F6F6;
+  visibility: visible;
+}
+
+.header {
+  height: 113px;
+}
+
+.header-logo {
+  background: #FFFFFF;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+  position: relative;
+  padding: 14px 89px;
+}
+
+.logo {
+  width: 197px;
+  height: 36px;
+  text-align: center;
+}
+.logo img {
+  width: 162px;
+  height: 44px;
+}
+
+.location {
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  background-color: #EAEAEA;
+}
+.location i {
+  color: #353535;
+}
+.location input {
+  width: 110px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: normal;
+  border: none;
+  background-color: #EAEAEA;
+  outline: none;
+}
+
+.reservation {
+  padding: 39px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.reservation h2 {
+  width: 275px;
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.reservation p {
+  width: 315px;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.gradient_container {
+  position: relative;
+}
+
+.gradient_link, .gradient_link_hover {
+  display: inline-block;
+  color: #FFFFFF;
+  width: 218px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: 0em;
+  padding: 15.5px 0;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  text-decoration: none;
+  text-align: center;
+  margin: 12px 0 12px;
+}
+
+.gradient_link {
+  position: absolute;
+  background: linear-gradient(359.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  z-index: 2;
+}
+
+.gradient_link_hover {
+  position: relative;
+  background: linear-gradient(358.33deg, #9356DC -39.44%, #FF79DA 81.93%);
+  opacity: 0;
+  z-index: 3;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.gradient_container:hover .gradient_link_hover {
+  opacity: 1;
+}
+
+.loader {
+  background: white;
+  height: 1080px;
+  position: fixed;
+  z-index: 3000000;
+  width: 100%;
+  animation: hideElement 3s linear;
+  display: none;
+}
+.loader .loader-icon {
+  font-size: 100px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(147, 86, 220);
+}
+.loader .loader-icon i {
+  animation: jumpInOut 2s ease-in-out infinite;
 }
 
 /*# sourceMappingURL=homepage.css.map */
