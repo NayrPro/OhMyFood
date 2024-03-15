@@ -4,7 +4,7 @@
     padding: 45px 20px 64px;
     gap: 25px;
     .fonctionnement__title{
-        @include section-heading(275px, Roboto, 24px, 700, 28px, 0em);
+        @include section-heading(275px, $font-family, 24px, 700, 28px, 0em);
         text-align: left;
     }
     .fonctionnement__container{
@@ -31,7 +31,7 @@
                     border-radius: 50%;
                     span{
                         color: $white-color;
-                        @include section-heading(24px, Roboto, 14px, 500, normal, normal);
+                        @include section-heading(24px, $font-family, 14px, 500, normal, normal);
                         display: inline-flex;
                         @include flex-centered-elt;
                         height: inherit;
@@ -48,7 +48,7 @@
                         color: rgba(147, 86, 220, 1);
                     }
                     p{
-                        @include section-heading(auto, Roboto, 16px, 500, 19px, 0em);
+                        @include section-heading(auto, $font-family, 16px, 500, 19px, 0em);
                         text-align: left;
 
                     }

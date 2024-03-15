@@ -17,7 +17,7 @@
                 @include flex-row;
                 gap: 10px;
                 .footer__bold__text{
-                    @include section-heading(auto, Roboto, 16px, 500, 19px, 0em);
+                    @include section-heading(auto, $font-family, 16px, 500, 19px, 0em);
                     text-align: left;
                 }
                 .footer__bold__icon{
@@ -27,7 +27,7 @@
 
             }
             .footer__regular{
-                @include section-heading(auto, Roboto, 16px, 300, 19px, 0em);
+                @include section-heading(auto, $font-family, 16px, 300, 19px, 0em);
                 text-align: left;
             }
         }

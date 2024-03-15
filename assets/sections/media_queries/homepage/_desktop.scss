@@ -40,7 +40,7 @@
             padding: 31px;
             gap: 20px;
             .reservation__title{
-                @include section-heading(275px, Roboto, 40px, 700, 47px, 0em);
+                @include section-heading(275px, $font-family, 40px, 700, 47px, 0em);
                 width: 645px;
             }
             .reservation__content {

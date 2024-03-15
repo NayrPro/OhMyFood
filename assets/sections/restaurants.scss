@@ -3,7 +3,7 @@
     padding: 54px 20px;
     gap: 28px;
     .restaurants__title{
-        @include section-heading(auto, Roboto, 24px, 700, 28px, normal);
+        @include section-heading(auto, $font-family, 24px, 700, 28px, normal);
     }
     .restaurant__box{
         width: 340px;
@@ -30,7 +30,7 @@
                 top: 11px;
                 left: 248px;
                 .card__tag__text{
-                    @include section-heading(inherit, Roboto, 14px, 500, 16px, 0em);
+                    @include section-heading(inherit, $font-family, 14px, 500, 16px, 0em);
                     text-align: center;
                     color: rgba(0, 135, 102, 1);
                     display: inline-flex;
@@ -51,12 +51,12 @@
                 
                     .restaurant__card__description{
                         .restaurant__card__title{
-                            @include section-heading(auto, Roboto, 18px, 700, 21px, 0em);
+                            @include section-heading(auto, $font-family, 18px, 700, 21px, 0em);
                             text-align: left;
             
                         }
                         .restaurant__card__location{
-                            @include section-heading(auto, Roboto, 17px, 300, 20px, 0em);
+                            @include section-heading(auto, $font-family, 17px, 300, 20px, 0em);
                             text-align: left;
             
                         }

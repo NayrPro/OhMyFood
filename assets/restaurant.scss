@@ -35,7 +35,7 @@
     .restaurants__title{
         margin-top: 10px;
         .restaurants__title__text{
-            @include section-heading(auto, Shrikhand, 28px, 400, 41px, 0em);
+            @include section-heading(auto, $font-family-title, 28px, 400, 41px, 0em);
             text-align: left;
             color: #101010;
         }
@@ -48,7 +48,7 @@
             height: 27px;
             gap: 5px;
             .menus__title__text{
-                @include section-heading(auto, Roboto, 16px, 300, 19px, 0em);
+                @include section-heading(auto, $font-family, 16px, 300, 19px, 0em);
                 text-align: left;
             }
             .underline{
@@ -69,12 +69,12 @@
                 padding: 15px;
                 gap: 5px;
                 .menu__title{
-                    @include section-heading(auto, Roboto, 18px, 500, 21px, 0em);
+                    @include section-heading(auto, $font-family, 18px, 500, 21px, 0em);
                     text-align: left;
                 }
                 .menu__detail{
                     .menu__detail__text{
-                        @include section-heading(auto, Roboto, 15px, 300, 18px, 0em);
+                        @include section-heading(auto, $font-family, 15px, 300, 18px, 0em);
                         text-align: left;
                     }
                 }
@@ -98,7 +98,7 @@
                     color: #fff;
                 }
                 .menu__price{
-                    font-family: Roboto;
+                    font-family: $font-family;
                     font-size: 15px;
                     font-weight: 700;
                     letter-spacing: 0em;

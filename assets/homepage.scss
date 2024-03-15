@@ -52,7 +52,7 @@
         color: $dark-color;
     }
     input{
-        @include section-heading(110px, Roboto, 16px, 500, 19px, normal);
+        @include section-heading(110px, $font-family, 16px, 500, 19px, normal);
         border: none;
         background-color: $background-color;
         outline: none;
@@ -65,11 +65,11 @@
     align-items: center;
     gap: 15px;
     h2{
-        @include section-heading(275px, Roboto, 24px, 700, 28px, 0em);
+        @include section-heading(275px, $font-family, 24px, 700, 28px, 0em);
         text-align: center;
     }
     p{
-        @include section-heading(315px, Roboto, 18px, 300, 21px, 0em);
+        @include section-heading(315px, $font-family, 18px, 300, 21px, 0em);
         text-align: center;
     }
 }
@@ -81,7 +81,7 @@
 .gradient__link, .gradient__link__hover{
     display: inline-block;
     color: $white-color;
-    @include section-heading(218px, Roboto, 16px, 500, 19px, 0em);
+    @include section-heading(218px, $font-family, 16px, 500, 19px, 0em);
     padding: 15.5px 0;
     border: none;
     border-radius: 25px;
