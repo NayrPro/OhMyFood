@@ -9,7 +9,7 @@
     }
 
     .fonctionnement{
-        h2{
+        .fonctionnement__title {
             @include centered-block;
             text-align: center;
         }
@@ -25,11 +25,11 @@
 
     .restaurants .restaurant__box {
         width: auto;
-        .restaurant__card{
+        .restaurant__card {
             .card__tag {
                 left: 508px;
             }
-            img {
+            .restaurant__img {
                 width: auto;
             }
         }

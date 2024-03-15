@@ -1,14 +1,14 @@
-@import 'flex.scss';
-@import 'palette.scss';
-@import 'keyframes.scss';
-@import 'mixins.scss';
-@import 'variables.scss';
+@import './tools/flex.scss';
+@import './tools/keyframes.scss';
+@import './tools/mixins.scss';
+@import './tools/variables.scss';
 @import './sections/fonctionnements.scss';
 @import './sections/restaurants.scss';
 @import './sections/footer.scss';
 @import './sections/media_queries/homepage/_desktop.scss';
 @import './sections/media_queries/homepage/_tablet.scss';
 @import './sections/media_queries/homepage/_mobile.scss';
+@import 'restaurant.scss';
 
 .m-0{
     margin: 0;
@@ -25,7 +25,7 @@
     height: 113px;
 }
 
-.header-logo{
+.header__logo{
     background: $white-color;
     box-shadow: $box-shadow #00000026;
     position: relative;
@@ -74,11 +74,11 @@
     }
 }
 
-.gradient_container{
+.gradient__container{
     position: relative;
 }
 
-.gradient_link, .gradient_link_hover{
+.gradient__link, .gradient__link__hover{
     display: inline-block;
     color: $white-color;
     @include section-heading(218px, Roboto, 16px, 500, 19px, 0em);
@@ -91,19 +91,19 @@
     margin: 12px 0 12px;
 }
 
-.gradient_link{
+.gradient__link{
     position: absolute;
-    background: linear-gradient(359.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    background: linear-gradient(359.33deg, $primary-color -11.44%, $secondary-color 123.93%);
     z-index: 2;
 }
-.gradient_link_hover{
+.gradient__link__hover{
     position: relative;
-    background: linear-gradient(358.33deg, #9356DC -39.44%, #FF79DA 81.93%);
+    background: linear-gradient(358.33deg, $primary-color -39.44%, $secondary-color 81.93%);
     opacity: 0;
     z-index: 3;
     transition: opacity .5s ease-in-out;
 }
-.gradient_container:hover .gradient_link_hover{
+.gradient__container:hover .gradient__link__hover{
     opacity: 1;
 }
 

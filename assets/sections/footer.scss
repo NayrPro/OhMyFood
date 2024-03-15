@@ -2,7 +2,7 @@
     background: $dark-color;
     color: $white-color;
     padding: 25px;
-    img{
+    .footer__logo{
         width: 107px;
         margin-bottom: 18px;
         filter: invert(100%) sepia(55%) saturate(12%) hue-rotate(306deg) brightness(115%) contrast(101%);
@@ -10,17 +10,17 @@
     .footer__content{
         @include flex-column;
         gap: 8px;
-        a{
+        .footer__content__link{
             color: $white-color;
             text-decoration: none;
             .footer__bold{
                 @include flex-row;
                 gap: 10px;
-                p{
+                .footer__bold__text{
                     @include section-heading(auto, Roboto, 16px, 500, 19px, 0em);
                     text-align: left;
                 }
-                i{
+                .footer__bold__icon{
                     font-size: 12px;
                     line-height: 19px;
                 }

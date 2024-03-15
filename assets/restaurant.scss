@@ -1,27 +1,27 @@
-@import "./mixins.scss";
-@import "./sections/media_queries/palette/desktop";
-@import "./sections/media_queries/palette/mobile";
+@import "./tools/mixins.scss";
+@import "./sections/media_queries/restaurant/desktop";
+@import "./sections/media_queries/restaurant/mobile";
 
-.back{
+.header__back{
     position: absolute;
     top: 17px;
     left: 17px;
     padding: 7px 6px;
-    a{
+    .header__back__link{
         color: #000;
         text-decoration: none;
     }
-    i{
+    .header__back__icon{
         font-size: 20px;
     }
 }
 
-.restaurant_img{
+.restaurant__img{
     width: 375px;
     height: 275px;
 }
 
-.restaurants_page{
+.restaurants__page{
     padding: 17px 17px 0 17px !important;
     gap: 30px !important;
     background: #F6F6F6;
@@ -32,9 +32,9 @@
 }
 
 .restaurants{
-    .restaurant_title{
+    .restaurants__title{
         margin-top: 10px;
-        h1{
+        .restaurants__title__text{
             @include section-heading(auto, Shrikhand, 28px, 400, 41px, 0em);
             text-align: left;
             color: #101010;
@@ -43,11 +43,11 @@
     }
     .menus{
         gap: 12px;
-        .menus_title{
+        .menus__title{
             width: 275px;
             height: 27px;
             gap: 5px;
-            h2{
+            .menus__title__text{
                 @include section-heading(auto, Roboto, 16px, 300, 19px, 0em);
                 text-align: left;
             }
@@ -55,8 +55,8 @@
                 width: 40px;
                 top: 27px;
                 border: 2px;
-                background: #99E2D0;
-                border: 2px solid #99E2D0;
+                background: $tertiary-color;
+                border: 2px solid $tertiary-color;
             }
         }
         .menu{
@@ -65,29 +65,31 @@
             box-shadow: 0px 4.011494159698486px 15.043103218078613px 0px #0000001A;
             position: relative;
             overflow: hidden;
-            .menu_card{
+            .menu__card{
                 padding: 15px;
                 gap: 5px;
-                .menu_title{
+                .menu__title{
                     @include section-heading(auto, Roboto, 18px, 500, 21px, 0em);
                     text-align: left;
                 }
-                span{
-                    @include section-heading(auto, Roboto, 15px, 300, 18px, 0em);
-                    text-align: left;
+                .menu__detail{
+                    .menu__detail__text{
+                        @include section-heading(auto, Roboto, 15px, 300, 18px, 0em);
+                        text-align: left;
+                    }
                 }
             }
-            .validation_box{
+            .validation__box{
                 width: 58px;
                 border-radius: 0px 15px 15px 0px;
-                background: #99E2D0;
+                background: $tertiary-color;
                 position: absolute;
                 height: 74px;
                 transition: all 500ms ease;
                 -webkit-transition: all 500ms ease;
                 transform-origin: translateX(341px);
                 -webkit-transform-origin: translateX(341px);
-                i{
+                .validation__box__icon{
                     position: absolute;
                     top: 50%;
                     left: 50%;
@@ -95,7 +97,7 @@
                     font-size: 20px;
                     color: #fff;
                 }
-                p{
+                .menu__price{
                     font-family: Roboto;
                     font-size: 15px;
                     font-weight: 700;
@@ -111,17 +113,17 @@
         input[type=checkbox]{
             display: none;
         }
-        input[type=checkbox]:checked + .menu .validation_box {
+        input[type=checkbox]:checked + .menu .validation__box {
             transform: translateX(283px);
         }
-        input[type=checkbox]:not(:checked) + .menu .validation_box {
+        input[type=checkbox]:not(:checked) + .menu .validation__box {
             transform: translateX(341px);
         }
         input[type=checkbox]:checked + .menu{
-            .menu_card{
+            .menu__card{
                 animation: reduce 1s backwards;
             } 
-            .menu_title, span{
+            .menu__title, .menu__detail__text{
                 white-space: nowrap;  
                 overflow: hidden;
                 text-overflow: ellipsis;
@@ -129,10 +131,10 @@
             } 
         }
         input[type=checkbox]:not(:checked) + .menu{
-            .menu_card{
+            .menu__card{
                 animation: enlarge 1s forwards;
             } 
-            .menu_title, span{
+            .menu__title, .menu__detail__text{
                 white-space: nowrap;  
                 overflow: hidden;
                 text-overflow: ellipsis;

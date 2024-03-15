@@ -1,30 +1,30 @@
 @media (min-width : 950px) {
-    .menu_title, span{
+    .menu__title, .menu__detail__text{
         overflow: visible !important;
         text-overflow: unset !important;
     }
     .homepage-restaurant{
         background: #fff !important;
-        .restaurant_img {
+        .restaurant__img {
            width: 1440px;
            height: 383px;
            object-fit: cover;
         }
-        .main-restaurant{
+        .main__restaurant{
         width: 1055px;
         background: #F6F6F6;
         margin: auto;
         .menus {
                 width: 634px;
                 margin: auto;
-            input[type=checkbox]:hover + .menu .validation_box {
+            input[type=checkbox]:hover + .menu .validation__box {
                 transform: translateX(576px);
             }
-            input[type=checkbox]:not(:hover) + .menu .validation_box {
+            input[type=checkbox]:not(:hover) + .menu .validation__box {
                     transform: translateX(634px);
             }
         }
-        .restaurant_title{
+        .restaurants__title{
                 align-self: center;
         }
         }

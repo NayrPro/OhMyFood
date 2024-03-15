@@ -3,7 +3,7 @@
     @include flex-column;
     padding: 45px 20px 64px;
     gap: 25px;
-    h2{
+    .fonctionnement__title{
         @include section-heading(275px, Roboto, 24px, 700, 28px, 0em);
         text-align: left;
     }
