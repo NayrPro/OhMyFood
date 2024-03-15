@@ -11,13 +11,26 @@
         }
     }
 
+    .header-restaurant{
+        height: 96px !important;
+    }
+
     .homepage{
         width: 1440px !important;
-        .header-logo{
-            @include flex-column;
-            align-items: center;
-            .logo img {
-                width: 200px;
+        header{
+            height: 146px;
+            .header-logo{
+                padding: 0 89px;
+                @include flex-column;
+                height: 96px;
+                justify-content: center;
+                .back{
+                    top: 33px;
+                }
+                align-items: center;
+                .logo img {
+                    width: 200px;
+                }
             }
         }
 
@@ -25,9 +38,11 @@
             padding: 31px;
             gap: 20px;
             h2{
+                @include section-heading(275px, Roboto, 40px, 700, 47px, 0em);
                 width: 645px;
             }
             p {
+                margin: 15px 0;
                 width: 531px;
             }
             .gradient_container a{
@@ -47,7 +62,7 @@
             .restaurant__box{
                 display: grid;
                 grid-template-rows: 1fr 1fr;
-                grid-row-gap: 15px;
+                grid-row-gap: 50px;
                 grid-template-columns: 1fr 1fr;
                 grid-column-gap: 84px;
                 .restaurant__card {
