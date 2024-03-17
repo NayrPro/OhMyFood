@@ -30,14 +30,6 @@
     opacity: 1;
   }
 }
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 @keyframes reduce {
   0% {
     width: 341px;
@@ -54,14 +46,6 @@
     width: 341px;
   }
 }
-@keyframes rotating {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 @keyframes jumpInOut {
   0%, 100% {
     transform: translateY(0);
@@ -76,14 +60,6 @@
   }
   90%, 100% {
     display: none;
-  }
-}
-@keyframes showElement {
-  0% {
-    visibility: hidden;
-  }
-  100% {
-    visibility: visible;
   }
 }
 .fonctionnement {
