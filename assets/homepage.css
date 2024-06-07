@@ -480,11 +480,11 @@
     width: 634px;
     margin: auto;
   }
-  .homepage-restaurant .main__restaurant .menus input[type=checkbox]:hover + .menu .validation__box {
-    transform: translateX(576px);
+  .homepage-restaurant .main__restaurant .menus .menu:hover .menu__validation {
+    margin-right: O;
   }
-  .homepage-restaurant .main__restaurant .menus input[type=checkbox]:not(:hover) + .menu .validation__box {
-    transform: translateX(634px);
+  .homepage-restaurant .main__restaurant .menus .menu:not(:hover) .menu__validation {
+    margin-right: -58px;
   }
   .homepage-restaurant .main__restaurant .restaurants__title {
     align-self: center;
@@ -503,11 +503,19 @@
     width: 100% !important;
     object-fit: cover;
   }
-  .menus input[type=checkbox]:checked + .menu .validation__box {
-    transform: translateX(548px) !important;
+  .menus input[type=checkbox]:checked + .menu .menu__validation {
+    margin-right: O;
   }
-  .menus input[type=checkbox]:not(:checked) + .menu .validation__box {
-    transform: translateX(608px) !important;
+  .menus input[type=checkbox]:not(:checked) + .menu .menu__validation {
+    margin-right: -58px;
+  }
+}
+@media (max-width: 640px) {
+  .menus input[type=checkbox]:checked + .menu .menu__validation {
+    margin-right: O;
+  }
+  .menus input[type=checkbox]:not(:checked) + .menu .menu__validation {
+    margin-right: -58px;
   }
 }
 @media (max-width: 950px) {
@@ -633,6 +641,7 @@
 .restaurants .menus .menu .menu__card {
   padding: 15px;
   gap: 5px;
+  overflow: hidden;
 }
 .restaurants .menus .menu .menu__card .menu__title {
   width: auto;
@@ -642,6 +651,9 @@
   line-height: 21px;
   letter-spacing: 0em;
   text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .restaurants .menus .menu .menu__card .menu__detail .menu__detail__text {
   width: auto;
@@ -651,62 +663,36 @@
   line-height: 18px;
   letter-spacing: 0em;
   text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.restaurants .menus .menu .validation__box {
+.restaurants .menus .menu .menu__price {
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 40px 19px 0px;
+}
+.restaurants .menus .menu .menu__validation {
+  transition: all 0.5s;
+}
+.restaurants .menus .menu .menu__validation .validation__box {
   width: 58px;
   border-radius: 0px 15px 15px 0px;
   background: #99E2D0;
-  position: absolute;
   height: 74px;
-  transition: all 500ms ease;
-  -webkit-transition: all 500ms ease;
-  transform-origin: translateX(341px);
-  -webkit-transform-origin: translateX(341px);
 }
-.restaurants .menus .menu .validation__box .validation__box__icon {
-  position: absolute;
+.restaurants .menus .menu .menu__validation .validation__box .validation__box__icon {
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 20px;
   color: #fff;
-}
-.restaurants .menus .menu .validation__box .menu__price {
-  font-family: Roboto;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 0em;
-  width: fit-content;
-  align-self: end;
-  margin-bottom: 15px;
-  right: 40px;
-  position: relative;
+  height: fit-content;
 }
 .restaurants .menus input[type=checkbox] {
   display: none;
-}
-.restaurants .menus input[type=checkbox]:checked + .menu .validation__box {
-  transform: translateX(283px);
-}
-.restaurants .menus input[type=checkbox]:not(:checked) + .menu .validation__box {
-  transform: translateX(341px);
-}
-.restaurants .menus input[type=checkbox]:checked + .menu .menu__card {
-  animation: reduce 1s backwards;
-}
-.restaurants .menus input[type=checkbox]:checked + .menu .menu__title, .restaurants .menus input[type=checkbox]:checked + .menu .menu__detail__text {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 213px;
-}
-.restaurants .menus input[type=checkbox]:not(:checked) + .menu .menu__card {
-  animation: enlarge 1s forwards;
-}
-.restaurants .menus input[type=checkbox]:not(:checked) + .menu .menu__title, .restaurants .menus input[type=checkbox]:not(:checked) + .menu .menu__detail__text {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .restaurants .entrees {
   opacity: 0;

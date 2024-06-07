@@ -61,3 +61,21 @@
         }
     }
 }
+
+@mixin validation__check{
+    .menus{
+        input[type=checkbox]:checked + .menu .menu__validation {
+            margin-right: O;
+            
+        }
+        input[type=checkbox]:not(:checked) + .menu .menu__validation {
+                margin-right: -58px;
+        }
+    }
+}
+
+@mixin overflow_ellipsis{
+    white-space: nowrap;  
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

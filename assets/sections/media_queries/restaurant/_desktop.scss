@@ -15,13 +15,14 @@
         background: #F6F6F6;
         margin: auto;
         .menus {
-                width: 634px;
-                margin: auto;
-            input[type=checkbox]:hover + .menu .validation__box {
-                transform: translateX(576px);
+            width: 634px;
+            margin: auto;
+            .menu:hover .menu__validation {
+                margin-right: O;
+                
             }
-            input[type=checkbox]:not(:hover) + .menu .validation__box {
-                    transform: translateX(634px);
+            .menu:not(:hover) .menu__validation {
+                margin-right: -58px;
             }
         }
         .restaurants__title{
