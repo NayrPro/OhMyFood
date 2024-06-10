@@ -1,16 +1,4 @@
 @media (min-width : 950px) {
-    .heart__container{
-        input[type=checkbox]:hover + .heart{
-            opacity: 0 !important;
-        }
-        input[type=checkbox]:not(:hover) + .heart{
-            opacity: 1 !important;
-        }
-        input[type=checkbox]:hover + .heart + .heart-filled{
-            opacity: 1 !important;
-        }
-    }
-
     .header__restaurant{
         height: 96px !important;
     }

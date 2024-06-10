@@ -60,18 +60,28 @@
             display: none;
         }
     }
+    .heart__container:hover .heart{
+        opacity: 0;
+    }
+    .heart__container:not(:hover) .heart{
+        opacity: 1;
+    }
+    .heart__container:hover .heart-filled{
+        opacity: 1;
+    }
+    .heart__container:not(:hover) .heart-filled{
+        opacity: 0;   
+    }
 }
 
 @mixin validation__check{
-    .menus{
-        input[type=checkbox]:checked + .menu .menu__validation {
+        .menu:hover .menu__validation {
             margin-right: O;
             
         }
-        input[type=checkbox]:not(:checked) + .menu .menu__validation {
-                margin-right: -58px;
+        .menu:not(:hover) .menu__validation {
+            margin-right: -58px;
         }
-    }
 }
 
 @mixin overflow_ellipsis{

@@ -59,6 +59,7 @@
                 border: 2px solid $tertiary-color;
             }
         }
+        @include validation__check;
         .menu{
             background-color: #fff;
             border-radius: 15px;

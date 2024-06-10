@@ -259,6 +259,18 @@
 .restaurants .restaurant__box .restaurant__card .restaurant__card__details .heart__container input[type=checkbox] {
   display: none;
 }
+.restaurants .restaurant__box .restaurant__card .restaurant__card__details .heart__container:hover .heart {
+  opacity: 0;
+}
+.restaurants .restaurant__box .restaurant__card .restaurant__card__details .heart__container:not(:hover) .heart {
+  opacity: 1;
+}
+.restaurants .restaurant__box .restaurant__card .restaurant__card__details .heart__container:hover .heart-filled {
+  opacity: 1;
+}
+.restaurants .restaurant__box .restaurant__card .restaurant__card__details .heart__container:not(:hover) .heart-filled {
+  opacity: 0;
+}
 .restaurants .restaurant__box .la_note_enchantee .restaurant__img {
   object-position: 0% 61%;
 }
@@ -311,15 +323,6 @@
 }
 
 @media (min-width: 950px) {
-  .heart__container input[type=checkbox]:hover + .heart {
-    opacity: 0 !important;
-  }
-  .heart__container input[type=checkbox]:not(:hover) + .heart {
-    opacity: 1 !important;
-  }
-  .heart__container input[type=checkbox]:hover + .heart + .heart-filled {
-    opacity: 1 !important;
-  }
   .header__restaurant {
     height: 96px !important;
   }
@@ -441,23 +444,6 @@
     width: auto;
   }
 }
-@media (max-width: 950px) {
-  .restaurant__card__details .heart__container input[type=checkbox]:checked + .heart {
-    opacity: 0 !important;
-  }
-  .restaurant__card__details .heart__container input[type=checkbox]:not(:checked) + .heart {
-    opacity: 1 !important;
-  }
-  .restaurant__card__details .heart__container input[type=checkbox]:checked + .heart + .heart-filled {
-    opacity: 1 !important;
-  }
-  .restaurant__card__details .heart__container input[type=checkbox]:not(:checked) + .heart + .heart-filled {
-    opacity: 0 !important;
-  }
-  .restaurant__card__details .heart__container input[type=checkbox] {
-    display: none;
-  }
-}
 @media (min-width: 950px) {
   .menu__title, .menu__detail__text {
     overflow: visible !important;
@@ -480,12 +466,6 @@
     width: 634px;
     margin: auto;
   }
-  .homepage-restaurant .main__restaurant .menus .menu:hover .menu__validation {
-    margin-right: O;
-  }
-  .homepage-restaurant .main__restaurant .menus .menu:not(:hover) .menu__validation {
-    margin-right: -58px;
-  }
   .homepage-restaurant .main__restaurant .restaurants__title {
     align-self: center;
   }
@@ -502,37 +482,6 @@
     height: 275px;
     width: 100% !important;
     object-fit: cover;
-  }
-  .menus input[type=checkbox]:checked + .menu .menu__validation {
-    margin-right: O;
-  }
-  .menus input[type=checkbox]:not(:checked) + .menu .menu__validation {
-    margin-right: -58px;
-  }
-}
-@media (max-width: 640px) {
-  .menus input[type=checkbox]:checked + .menu .menu__validation {
-    margin-right: O;
-  }
-  .menus input[type=checkbox]:not(:checked) + .menu .menu__validation {
-    margin-right: -58px;
-  }
-}
-@media (max-width: 950px) {
-  .heart__container input[type=checkbox]:checked + .heart {
-    opacity: 0;
-  }
-  .heart__container input[type=checkbox]:not(:checked) + .heart {
-    opacity: 1;
-  }
-  .heart__container input[type=checkbox]:checked + .heart + .heart-filled {
-    opacity: 1;
-  }
-  .heart__container input[type=checkbox]:not(:checked) + .heart + .heart-filled {
-    opacity: 0;
-  }
-  .heart__container input[type=checkbox] {
-    display: none;
   }
 }
 .header__back {
@@ -607,6 +556,18 @@
 .restaurants .restaurants__title .heart__container input[type=checkbox] {
   display: none;
 }
+.restaurants .restaurants__title .heart__container:hover .heart {
+  opacity: 0;
+}
+.restaurants .restaurants__title .heart__container:not(:hover) .heart {
+  opacity: 1;
+}
+.restaurants .restaurants__title .heart__container:hover .heart-filled {
+  opacity: 1;
+}
+.restaurants .restaurants__title .heart__container:not(:hover) .heart-filled {
+  opacity: 0;
+}
 .restaurants .menus {
   gap: 12px;
 }
@@ -630,6 +591,12 @@
   border: 2px;
   background: #99E2D0;
   border: 2px solid #99E2D0;
+}
+.restaurants .menus .menu:hover .menu__validation {
+  margin-right: O;
+}
+.restaurants .menus .menu:not(:hover) .menu__validation {
+  margin-right: -58px;
 }
 .restaurants .menus .menu {
   background-color: #fff;

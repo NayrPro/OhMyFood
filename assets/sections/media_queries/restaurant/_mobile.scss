@@ -12,47 +12,5 @@
         width: 100% !important;
         object-fit: cover;
     }
-    .menus{
-        input[type=checkbox]:checked + .menu .menu__validation {
-            margin-right: O;
-            
-        }
-        input[type=checkbox]:not(:checked) + .menu .menu__validation {
-                margin-right: -58px;
-        }
-    }
 
-}
-
-@media (max-width : 640px){
-    .menus{
-        input[type=checkbox]:checked + .menu .menu__validation {
-            margin-right: O;
-            
-        }
-        input[type=checkbox]:not(:checked) + .menu .menu__validation {
-                margin-right: -58px;
-        }
-    }
-}
-
-@media (max-width: 950px){
-    .heart__container{
-        input[type=checkbox]:checked + .heart{
-            opacity: 0;
-        }
-        input[type=checkbox]:not(:checked) + .heart{
-            opacity: 1;
-        }
-        input[type=checkbox]:checked + .heart + .heart-filled{
-            opacity: 1;
-        }
-        input[type=checkbox]:not(:checked) + .heart + .heart-filled{
-            opacity: 0;
-            
-        }
-        input[type=checkbox]{
-            display: none;
-        }
-    }
 }

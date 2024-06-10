@@ -17,13 +17,6 @@
         .menus {
             width: 634px;
             margin: auto;
-            .menu:hover .menu__validation {
-                margin-right: O;
-                
-            }
-            .menu:not(:hover) .menu__validation {
-                margin-right: -58px;
-            }
         }
         .restaurants__title{
                 align-self: center;
