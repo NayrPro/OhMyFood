@@ -593,7 +593,7 @@
   border: 2px solid #99E2D0;
 }
 .restaurants .menus .menu:hover .menu__validation {
-  margin-right: O;
+  margin-right: 0;
 }
 .restaurants .menus .menu:not(:hover) .menu__validation {
   margin-right: -58px;

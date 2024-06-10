@@ -76,7 +76,7 @@
 
 @mixin validation__check{
         .menu:hover .menu__validation {
-            margin-right: O;
+            margin-right: 0;
             
         }
         .menu:not(:hover) .menu__validation {
