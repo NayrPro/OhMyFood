@@ -256,9 +256,6 @@
   -ms-user-select: none;
   -webkit-user-select: none;
 }
-.restaurants .restaurant__box .restaurant__card .restaurant__card__details .heart__container input[type=checkbox] {
-  display: none;
-}
 .restaurants .restaurant__box .restaurant__card .restaurant__card__details .heart__container:hover .heart {
   opacity: 0;
 }
@@ -553,9 +550,6 @@
   -ms-user-select: none;
   -webkit-user-select: none;
 }
-.restaurants .restaurants__title .heart__container input[type=checkbox] {
-  display: none;
-}
 .restaurants .restaurants__title .heart__container:hover .heart {
   opacity: 0;
 }
@@ -657,9 +651,6 @@
   font-size: 20px;
   color: #fff;
   height: fit-content;
-}
-.restaurants .menus input[type=checkbox] {
-  display: none;
 }
 .restaurants .entrees {
   opacity: 0;
