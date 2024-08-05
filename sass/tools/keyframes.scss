@@ -7,38 +7,20 @@
     }
   }
 
-  @keyframes reduce {
-    0% {
-      width: 341px;
-    }
-    100% {
-      width: 253px;
-    }
+@keyframes jumpInOut {
+  0%, 100% {
+    transform: translateY(0);
   }
+  50% {
+    transform: translateY(-60px);
+  }
+}
 
-  @keyframes enlarge {
-    0% {
-      width: 253px;
-    }
-    100% {
-      width: 341px;
-    }
+@keyframes hideElement {
+  0% {
+    display: block;
   }
-
-  @keyframes jumpInOut {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-60px);
-    }
+  90%, 100% {
+    display: none;
   }
-
-  @keyframes hideElement {
-    0% {
-      display: block;
-    }
-    90%, 100% {
-      display: none;
-    }
-  }
+}
