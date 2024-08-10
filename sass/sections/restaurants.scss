@@ -6,7 +6,7 @@
         @include section-heading(auto, $font-family, 24px, 700, 28px, normal);
     }
     .restaurant__box{
-        width: 340px;
+        width: 100%;
         @include flex-column;
         gap: 15px;
         .restaurant__card {
@@ -28,7 +28,7 @@
                 background: rgba(153, 226, 208, 1);
                 box-shadow: $box-shadow rgba(0, 0, 0, 0.15);
                 top: 11px;
-                left: 248px;
+                right: 10px;
                 .card__tag__text{
                     @include section-heading(inherit, $font-family, 14px, 500, 16px, 0em);
                     text-align: center;

@@ -10,10 +10,11 @@
     .fonctionnement__container{
         @include flex-column;
         gap: 25px;
+        width: 100%;
         .fonctionnement__box{
-            width: 335px;
+            width: 100%;
             .fonctionnement__content{
-                width : 322.49px;
+                width : 100%;
                 height: 72.38px;
                 border-radius: 20px;
                 background: rgba(246, 246, 246, 1);

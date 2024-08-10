@@ -1,10 +1,10 @@
-@media (min-width : 950px) {
+@media (min-width : 1024px) {
     .header__restaurant{
         height: 96px !important;
     }
 
     .homepage{
-        width: 1440px !important;
+        width: 100% !important;
         header{
             height: 146px;
             .header__logo{
@@ -56,12 +56,9 @@
                 grid-template-columns: 1fr 1fr;
                 grid-column-gap: 84px;
                 .restaurant__card {
-                    width: 490px;
+                    width: 100%;
                     .restaurant__img{
-                    width: 490px;
-                    }
-                    .card__tag{
-                    left: 392px;
+                    width: 100%;
                     }
                 }
             }
